@@ -357,6 +357,7 @@ public with sharing class FlowControlLoopsCollections {
 
         // Declare a sum variable
         Decimal sum = 0;
+        Integer stopCountingThreshold = 40;
 
         // Iterating over the decimal values in our list.
         for (Decimal decimalValue : moneyInWallet) {
@@ -364,7 +365,7 @@ public with sharing class FlowControlLoopsCollections {
             // Add each decimalValue to our sum variable
             sum += decimalValue;
 
-            if (sum >= 40) {
+            if (sum >= stopCountingThreshold) {
                 break;
             }
         }
