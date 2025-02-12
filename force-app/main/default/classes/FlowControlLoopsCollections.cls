@@ -62,12 +62,17 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
+        
+
         // If both numbers are equal, return either of the numbers;
         if (num1 == num2) {
             return num1;
+        }else if (num1 == null || num2 == null) {
+            return null;
+        }else {
+            Integer largestOfTwoNumbers = Math.max(num1, num2);
+            return largestOfTwoNumbers;
         }
-        Integer largestOfTwoNumbers = Math.max(num1, num2);
-        return largestOfTwoNumbers
     }
 
 
@@ -119,18 +124,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-
-        // Using control flow to evaluate the value of a.
-        switch on a {
-            when '' {		
-                return 'Empty';
-            }	
-            when null {		
-                return 'Null';
-            }
-            when else {		  // default block, optional
-                return 'Contains Text';
-            }
+        // String.isEmpty combines empty and null, so I don't think I can use it in this use case.
+        if (a == null) {
+            return 'Null';
+        }else if (a == '') {
+            return 'Empty';
+        }else {
+            return 'Contains Text';
         }
     }
 
