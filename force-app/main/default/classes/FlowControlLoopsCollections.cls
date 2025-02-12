@@ -382,16 +382,15 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Map<String, Integer> addItemsToMap() {
         
-        // Initialize an empty Map
-        Map<String, Integer> fruitMap = new Map<String, Integer>();
-
-        // Add key-value pairs to our new map
-        fruitMap.put('Apples', 5);
-        fruitMap.put('Oranges', 10);
-        fruitMap.put('Bananas', 15);
-        fruitMap.put('Pears', 20);
-        fruitMap.put('Grapes', 25);
-
+        // Using inline initialization
+        Map<String, Integer> fruitMap = new Map<String, Integer>{
+            'Apples' => 5,
+            'Oranges' => 10,
+            'Bananas' => 15,
+            'Pears' => 20,
+            'Grapes' => 25
+        };
+        
         // Return our populate map
         return fruitMap; 
     }
