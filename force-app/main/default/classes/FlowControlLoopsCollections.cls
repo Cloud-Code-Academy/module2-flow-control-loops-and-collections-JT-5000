@@ -314,7 +314,9 @@ public with sharing class FlowControlLoopsCollections {
 
         // Loop through the list of integers
         for (Integer i : numbers) {
-            if (i >= 0) {
+            if (i < 0) {
+                continue;
+            }else {
                 sum += i;
             }
         }
