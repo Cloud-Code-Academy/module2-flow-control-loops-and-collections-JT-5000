@@ -420,7 +420,7 @@ public with sharing class FlowControlLoopsCollections {
         requestedSalary = employeeSalary.get(employeeName);
 
         // Return the salary of the employee, or null if the employee is not found in the Map
-        if (requestedSalary == null) {
+        if (employeeSalary.isEmpty()) {
             return null;
         }else {
             return requestedSalary; // Replace null with the variable you used to store the result
