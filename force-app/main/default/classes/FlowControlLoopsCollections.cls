@@ -62,7 +62,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
-        // If both numbers are equal, return either of the numbers\;
+        // If both numbers are equal, return either of the numbers;
         if (num1 == num2) {
             return num1;
         }
@@ -105,13 +105,10 @@ public with sharing class FlowControlLoopsCollections {
 
         if (a == null) {
             return null;
-        }else if (Math.mod(a, evenDivisor) == 0) {
-            return 'Even';
-        }else if (Math.mod(a, evenDivisor) != 0) {
-            return 'Odd';
-        }else{
-            return null;
         }
+
+        // If a is an even number we return 'Even' else we return 'Odd'
+        return Math.mod(a, evenDivisor) == 0 ? 'Even' : 'Odd';
     }
 
     /**
