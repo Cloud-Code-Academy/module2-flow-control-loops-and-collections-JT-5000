@@ -29,9 +29,6 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        if (x == null || y == null) {
-            return null;
-        }
         if (x > y) {
             return 'Hello World!';
         }else {
@@ -62,8 +59,6 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
-        
-
         // If both numbers are equal, return either of the numbers;
         if (num1 == num2) {
             return num1;
